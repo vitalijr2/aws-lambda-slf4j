@@ -1,10 +1,10 @@
 package org.example;
 
+import io.github.vitalijr2.aws.lambda.slf4j.AWSLambdaLoggerConfiguration;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Marker;
 import org.slf4j.event.Level;
-import uk.bot_by.aws_lambda.slf4j.AWSLambdaLoggerConfiguration;
 
 public class TestServiceProvider implements ServiceProvider {
 

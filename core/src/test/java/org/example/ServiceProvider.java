@@ -1,6 +1,6 @@
 package org.example;
 
-import uk.bot_by.aws_lambda.slf4j.AWSLambdaLoggerOutput;
+import io.github.vitalijr2.aws.lambda.slf4j.AWSLambdaLoggerOutput;
 
 public interface ServiceProvider extends AWSLambdaLoggerOutput {
 
