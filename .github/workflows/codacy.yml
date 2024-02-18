@@ -1,0 +1,73 @@
+name: "Codacy"
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "**" ]
+
+jobs:
+  build:
+    name: Maven build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'corretto'
+          java-version: 11
+      - name: Build with Maven
+        run: ./mvnw --batch-mode
+      - name: Temporarily save target and test requests
+        uses: actions/upload-artifact@master
+        with:
+          name: tests-and-target
+          path: |
+            core/target
+            logger/target
+            json-logger/target
+          retention-days: 1
+  codacy-security-scan:
+    name: Codacy Security Scan
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run Codacy Analysis CLI
+        uses: codacy/codacy-analysis-cli-action@5cc54a75f9ad88159bb54046196d920e40e367a5
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          verbose: true
+          output: results.sarif
+          format: sarif
+          gh-code-scanning-compat: true
+          max-allowed-issues: 2147483647
+      - name: Upload SARIF results file
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: results.sarif
+  codacy-coverage-reporter:
+    name: Codacy Coverage Reporter
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Retrieve saved test requests and target
+        uses: actions/download-artifact@master
+        with:
+          name: tests-and-target
+          path: .
+      - name: Run codacy-coverage-reporter
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: core/target/site/jacoco/jacoco.xml,logger/target/site/jacoco/jacoco.xml,json-logger/target/site/jacoco/jacoco.xml
