@@ -45,7 +45,7 @@ import org.slf4j.helpers.MessageFormatter;
  * The log:
  * <pre><code class="language-log">
  * START RequestId: cc4eb5aa-66b4-42fc-b27a-138bd672b38a Version: $LATEST
- * cc4eb5aa-66b4-42fc-b27a-138bd672b38a INFO uk.bot_by.bot.slf4j_demo.BotHandler - info message
+ * cc4eb5aa-66b4-42fc-b27a-138bd672b38a INFO io.github.vitalijr2.slf4j_demo.BotHandler - info message
  * END RequestId: cc4eb5aa-66b4-42fc-b27a-138bd672b38a
  * </code></pre>
  *

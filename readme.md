@@ -9,8 +9,8 @@ and [CloudWatch][cloudwatch].
 
 | Logger                           | Release                                                                                                                                                                     | Javadoc                                                                                                                                                   |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **slf4j-aws-lambda-logger**      | [![Maven Central](https://img.shields.io/maven-central/v/uk.bot-by/slf4j-aws-lambda-logger)](https://search.maven.org/artifact/uk.bot-by/slf4j-aws-lambda-logger)           | [![Javadoc](https://javadoc.io/badge2/uk.bot-by/slf4j-aws-lambda-logger/javadoc.svg)](https://javadoc.io/doc/uk.bot-by/slf4j-aws-lambda-logger)           |
-| **slf4j-aws-lambda-json-logger** | [![Maven Central](https://img.shields.io/maven-central/v/uk.bot-by/slf4j-aws-lambda-json-logger)](https://search.maven.org/artifact/uk.bot-by/slf4j-aws-lambda-json-logger) | [![Javadoc](https://javadoc.io/badge2/uk.bot-by/slf4j-aws-lambda-json-logger/javadoc.svg)](https://javadoc.io/doc/uk.bot-by/slf4j-aws-lambda-json-logger) |
+| **slf4j-aws-lambda-logger**      | [![Maven Central](https://img.shields.io/maven-central/v/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)](https://search.maven.org/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)           | [![Javadoc](https://javadoc.io/badge2/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger/javadoc.svg)](https://javadoc.io/doc/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)           |
+| **slf4j-aws-lambda-json-logger** | [![Maven Central](https://img.shields.io/maven-central/v/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger)](https://search.maven.org/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger) | [![Javadoc](https://javadoc.io/badge2/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger/javadoc.svg)](https://javadoc.io/doc/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger) |
 
 ## Table of Contents
 
@@ -76,16 +76,16 @@ public String handleRequest(Map<String, Object> input, Context context) {
 The log with **slf4j-aws-lambda-logger**:
 
 ```log
-983f71e5-9091-443b-8c01-6668120c0e5d INFO uk.bot_by.slf4j_demo.BotHandler - info message
-983f71e5-9091-443b-8c01-6668120c0e5d WARN uk.bot_by.slf4j_demo.BotHandler - warning message
-983f71e5-9091-443b-8c01-6668120c0e5d ERROR uk.bot_by.slf4j_demo.BotHandler - error message
-983f71e5-9091-443b-8c01-6668120c0e5d TRACE uk.bot_by.slf4j_demo.BotHandler - CRLF
+983f71e5-9091-443b-8c01-6668120c0e5d INFO io.github.vitalijr2.slf4j_demo.BotHandler - info message
+983f71e5-9091-443b-8c01-6668120c0e5d WARN io.github.vitalijr2.slf4j_demo.BotHandler - warning message
+983f71e5-9091-443b-8c01-6668120c0e5d ERROR io.github.vitalijr2.slf4j_demo.BotHandler - error message
+983f71e5-9091-443b-8c01-6668120c0e5d TRACE io.github.vitalijr2.slf4j_demo.BotHandler - CRLF
 injection
-983f71e5-9091-443b-8c01-6668120c0e5d TRACE uk.bot_by.slf4j_demo.BotHandler - CRLF
+983f71e5-9091-443b-8c01-6668120c0e5d TRACE io.github.vitalijr2.slf4j_demo.BotHandler - CRLF
 injection
-983f71e5-9091-443b-8c01-6668120c0e5d TRACE uk.bot_by.slf4j_demo.BotHandler - CRLF
+983f71e5-9091-443b-8c01-6668120c0e5d TRACE io.github.vitalijr2.slf4j_demo.BotHandler - CRLF
 injection
-983f71e5-9091-443b-8c01-6668120c0e5d WARN uk.bot_by.slf4j_demo.BotHandler - printable stacktrace
+983f71e5-9091-443b-8c01-6668120c0e5d WARN io.github.vitalijr2.slf4j_demo.BotHandler - printable stacktrace
 ```
 
 There is a JSON option with **slf4j-aws-lambda-json-logger**:
@@ -93,44 +93,44 @@ There is a JSON option with **slf4j-aws-lambda-json-logger**:
 ```json
 {
   "level": "INFO",
-  "logname": "uk.bot_by.slf4j_demo.BotHandler",
+  "logname": "io.github.vitalijr2.slf4j_demo.BotHandler",
   "message": "info message",
   "aws-request-id": "7b9af47e-d861-44b4-bde7-fa2e84ffb7cf"
 }
 {
   "level": "WARN",
-  "logname": "uk.bot_by.slf4j_demo.BotHandler",
+  "logname": "io.github.vitalijr2.slf4j_demo.BotHandler",
   "message": "warning message",
   "aws-request-id": "7b9af47e-d861-44b4-bde7-fa2e84ffb7cf"
 }
 {
   "level": "ERROR",
-  "logname": "uk.bot_by.slf4j_demo.BotHandler",
+  "logname": "io.github.vitalijr2.slf4j_demo.BotHandler",
   "message": "error message",
   "aws-request-id": "7b9af47e-d861-44b4-bde7-fa2e84ffb7cf"
 }
 {
   "level": "TRACE",
-  "logname": "uk.bot_by.slf4j_demo.BotHandler",
+  "logname": "io.github.vitalijr2.slf4j_demo.BotHandler",
   "message": "CRLF\ninjection",
   "aws-request-id": "7b9af47e-d861-44b4-bde7-fa2e84ffb7cf"
 }
 {
   "level": "TRACE",
-  "logname": "uk.bot_by.slf4j_demo.BotHandler",
+  "logname": "io.github.vitalijr2.slf4j_demo.BotHandler",
   "message": "CRLF\r\ninjection",
   "aws-request-id": "7b9af47e-d861-44b4-bde7-fa2e84ffb7cf"
 }
 {
   "level": "TRACE",
-  "logname": "uk.bot_by.slf4j_demo.BotHandler",
+  "logname": "io.github.vitalijr2.slf4j_demo.BotHandler",
   "message": "CRLF\rinjection",
   "aws-request-id": "7b9af47e-d861-44b4-bde7-fa2e84ffb7cf"
 }
 {
-  "stack-trace": "java.lang.Throwable: Printable Stacktrace Demo\n\tat uk.bot_by.slf4j_demo.BotHandler.handleRequest(BotHandler.java:36)\n\tat uk.bot_by.slf4j_demo.BotHandler.handleRequest(BotHandler.java:12)\n\tat lambdainternal.EventHandlerLoader$PojoHandlerAsStreamHandler.handleRequest(EventHandlerLoader.java:205)\n\tat lambdainternal.EventHandlerLoader$2.call(EventHandlerLoader.java:905)\n\tat lambdainternal.AWSLambda.startRuntime(AWSLambda.java:261)\n\tat lambdainternal.AWSLambda.startRuntime(AWSLambda.java:200)\n\tat lambdainternal.AWSLambda.main(AWSLambda.java:194)\n",
+  "stack-trace": "java.lang.Throwable: Printable Stacktrace Demo\n\tat io.github.vitalijr2.slf4j_demo.BotHandler.handleRequest(BotHandler.java:36)\n\tat io.github.vitalijr2.slf4j_demo.BotHandler.handleRequest(BotHandler.java:12)\n\tat lambdainternal.EventHandlerLoader$PojoHandlerAsStreamHandler.handleRequest(EventHandlerLoader.java:205)\n\tat lambdainternal.EventHandlerLoader$2.call(EventHandlerLoader.java:905)\n\tat lambdainternal.AWSLambda.startRuntime(AWSLambda.java:261)\n\tat lambdainternal.AWSLambda.startRuntime(AWSLambda.java:200)\n\tat lambdainternal.AWSLambda.main(AWSLambda.java:194)\n",
   "level": "WARN",
-  "logname": "uk.bot_by.slf4j_demo.BotHandler",
+  "logname": "io.github.vitalijr2.slf4j_demo.BotHandler",
   "message": "printable stacktrace",
   "aws-request-id": "7b9af47e-d861-44b4-bde7-fa2e84ffb7cf"
 }
@@ -223,7 +223,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-[Apache License v2.0](LICENSE)  
+[Apache License v2.0](LICENSE) 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 [SLF4J]: https://www.slf4j.org/
