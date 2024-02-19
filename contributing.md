@@ -14,12 +14,12 @@ try following [necolas's guidelines][issue-guidelines].
 ## Fork, patch and contribute code
 
 Feel free to fork **SLF4J for AWS Lambda**'s repository
-at [GitHub][bot-github] for your own use and updates.
+at [GitHub][github-project] for your own use and updates.
 
 Contribute your fixes and new features back to the main codebase using
 [GitHub pull requests][github-pull-requests].
 
 [github-issues]: https://github.com/vitalijr2/aws-lambda-slf4j/issues
 [issue-guidelines]: http://github.com/necolas/issue-guidelines/#readme
-[bot-github]: https://github.com/vitalijr2/aws-lambda-slf4j
+[github-project]: https://github.com/vitalijr2/aws-lambda-slf4j
 [github-pull-requests]: https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
