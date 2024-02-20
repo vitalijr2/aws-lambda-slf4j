@@ -47,7 +47,7 @@
     <dependency>
       <artifactId>aws-lambda-slf4j-core</artifactId>
       <groupId>io.github.vitalijr2.aws-lambda</groupId>
-      <version>1.1.1</version>
+      <version>1.1.2-SNAPSHOT</version>
     </dependency>
     <dependency>
       <artifactId>json</artifactId>
@@ -93,6 +93,6 @@
   <parent>
     <artifactId>aws-lambda-slf4j</artifactId>
     <groupId>io.github.vitalijr2.aws-lambda</groupId>
-    <version>1.1.1</version>
+    <version>1.1.2-SNAPSHOT</version>
   </parent>
 </project>
