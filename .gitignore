@@ -3,6 +3,8 @@ target/
 .flattened-pom.xml
 
 *~
+pom.xml.versionsBackup
+
 ### IntelliJ IDEA ###
 .idea/
 *.iws
