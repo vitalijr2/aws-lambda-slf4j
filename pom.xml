@@ -78,7 +78,7 @@
             <release>11</release>
           </configuration>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.12.1</version>
+          <version>3.13.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
@@ -212,12 +212,12 @@
         <plugin>
           <artifactId>sign-maven-plugin</artifactId>
           <groupId>org.simplify4u.plugins</groupId>
-          <version>1.0.1</version>
+          <version>1.1.0</version>
         </plugin>
         <plugin>
           <artifactId>central-publishing-maven-plugin</artifactId>
           <groupId>org.sonatype.central</groupId>
-          <version>0.3.0</version>
+          <version>0.4.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -441,7 +441,7 @@
   <properties>
     <javadoc-plugin.version>3.6.3</javadoc-plugin.version>
     <junit-jupiter.version>5.10.2</junit-jupiter.version>
-    <mockito.version>5.10.0</mockito.version>
+    <mockito.version>5.11.0</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <slf4j.version>2.0.12</slf4j.version>
     <system-stubs.version>2.1.6</system-stubs.version>
@@ -452,5 +452,5 @@
     <url>https://github.com/vitalijr2/aws-lambda-slf4j</url>
   </scm>
   <url>https://github.com/vitalijr2/aws-lambda-slf4j</url>
-  <version>1.1.1</version>
+  <version>1.1.2-SNAPSHOT</version>
 </project>
