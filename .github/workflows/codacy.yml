@@ -69,6 +69,5 @@ jobs:
       - name: Run codacy-coverage-reporter
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
-          coverage-reports: core/target/site/jacoco/jacoco.xml,logger/target/site/jacoco/jacoco.xml,json-logger/target/site/jacoco/jacoco.xml
-        secrets:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: core/target/site/jacoco/jacoco.xml,logger/target/site/jacoco/jacoco.xml,json-logger/target/site/jacoco/jacoco.xml
