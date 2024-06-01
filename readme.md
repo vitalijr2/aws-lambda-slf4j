@@ -3,12 +3,13 @@
 An [SLF4J][] Logger implementation for [AWS Lambda][lambda]
 and [CloudWatch][cloudwatch].
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/2c7cc1b8f6d7491283e13447594fdd82)](https://app.codacy.com/gh/vitalijr2/aws-lambda-slf4j/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-[![Codacy Coverage](https://app.codacy.com/project/badge/Coverage/2c7cc1b8f6d7491283e13447594fdd82)](https://app.codacy.com/gh/vitalijr2/aws-lambda-slf4j/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
-[![Java Version](https://img.shields.io/static/v1?label=java&message=11&color=blue&logo=java&logoColor=E23D28)](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+[![Codacy Badge][codacy-badge]][codacy-badge-link]
+[![Codacy Coverage][codacy-coverage]][codacy-coverage-link]  
+[![Libraries.io dependency status for GitHub repo][dependency-status]][dependencies]
+[![Java Version][java-version]][jdk-download]
 
-| Logger                           | Release                                                                                                                                                                     | Javadoc                                                                                                                                                   |
-|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Logger                           | Release                                                                                                                                                                                                               | Javadoc                                                                                                                                                                                             |
+|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **slf4j-aws-lambda-logger**      | [![Maven Central](https://img.shields.io/maven-central/v/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)](https://search.maven.org/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)           | [![Javadoc](https://javadoc.io/badge2/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger/javadoc.svg)](https://javadoc.io/doc/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)           |
 | **slf4j-aws-lambda-json-logger** | [![Maven Central](https://img.shields.io/maven-central/v/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger)](https://search.maven.org/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger) | [![Javadoc](https://javadoc.io/badge2/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger/javadoc.svg)](https://javadoc.io/doc/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger) |
 
@@ -231,6 +232,22 @@ limitations under the License.
 [lambda]: https://aws.amazon.com/lambda/
 
 [cloudwatch]: https://aws.amazon.com/cloudwatch/
+
+[codacy-badge]: https://app.codacy.com/project/badge/Grade/2c7cc1b8f6d7491283e13447594fdd82
+
+[codacy-badge-link]: https://app.codacy.com/gh/vitalijr2/aws-lambda-slf4j/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
+
+[codacy-coverage]: https://app.codacy.com/project/badge/Coverage/2c7cc1b8f6d7491283e13447594fdd82
+
+[codacy-coverage-link]: https://app.codacy.com/gh/vitalijr2/aws-lambda-slf4j/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage
+
+[dependency-status]: https://img.shields.io/librariesio/github/vitalijr2/aws-lambda-slf4j
+
+[dependencies]: https://central.sonatype.com/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger/dependencies
+
+[java-version]: https://img.shields.io/static/v1?label=java&message=11&color=blue&logo=java&logoColor=E23D28
+
+[jdk-download]: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 
 [mdc]: https://www.slf4j.org/manual.html#mdc "Mapped Diagnostic Context (MDC)"
 
