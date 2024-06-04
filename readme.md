@@ -244,7 +244,7 @@ limitations under the License.
 
 [dependency-status]: https://img.shields.io/librariesio/github/vitalijr2/aws-lambda-slf4j
 
-[dependencies]: https://central.sonatype.com/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger/dependencies
+[dependencies]: https://libraries.io/github/vitalijr2/aws-lambda-slf4j
 
 [java-version]: https://img.shields.io/static/v1?label=java&message=11&color=blue&logo=java&logoColor=E23D28
 
