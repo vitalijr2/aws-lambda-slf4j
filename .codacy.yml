@@ -1,3 +1,5 @@
 ---
 exclude_paths:
+  - "**/aws-lambda-slf4j.css"
+  - "**/prism.css"
   - "**/prism.js"
