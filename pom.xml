@@ -363,7 +363,7 @@
   <profiles>
     <profile>
       <build>
-        <defaultGoal>clean deploy</defaultGoal>
+        <defaultGoal>clean verify</defaultGoal>
         <plugins>
           <plugin>
             <artifactId>maven-javadoc-plugin</artifactId>
@@ -388,7 +388,7 @@
               <show>public</show>
               <top><![CDATA[
 <link rel="stylesheet" type="text/css" href="{@docRoot}/resources/prism.css"/>
-<link rel="stylesheet" type="text/css" href="{@docRoot}/resources/slf4j-aws-lambda.css"/>
+<link rel="stylesheet" type="text/css" href="{@docRoot}/resources/aws-lambda-slf4j.css"/>
 							]]></top>
             </configuration>
             <executions>

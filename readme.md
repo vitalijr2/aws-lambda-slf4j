@@ -4,14 +4,14 @@ An [SLF4J][] Logger implementation for [AWS Lambda][lambda]
 and [CloudWatch][cloudwatch].
 
 [![Codacy Badge][codacy-badge]][codacy-badge-link]
-[![Codacy Coverage][codacy-coverage]][codacy-coverage-link]  
+[![Codacy Coverage][codacy-coverage]][codacy-coverage-link]
 [![Libraries.io dependency status for GitHub repo][dependency-status]][dependencies]
 [![Java Version][java-version]][jdk-download]
 
 | Logger                           | Release                                                                                                                                                                                                               | Javadoc                                                                                                                                                                                             |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **slf4j-aws-lambda-logger**      | [![Maven Central](https://img.shields.io/maven-central/v/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)](https://search.maven.org/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)           | [![Javadoc](https://javadoc.io/badge2/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger/javadoc.svg)](https://javadoc.io/doc/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)           |
-| **slf4j-aws-lambda-json-logger** | [![Maven Central](https://img.shields.io/maven-central/v/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger)](https://search.maven.org/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger) | [![Javadoc](https://javadoc.io/badge2/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger/javadoc.svg)](https://javadoc.io/doc/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger) |
+| **aws-lambda-slf4j-logger**      | [![Maven Central](https://img.shields.io/maven-central/v/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)](https://search.maven.org/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)           | [![Javadoc](https://javadoc.io/badge2/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger/javadoc.svg)](https://javadoc.io/doc/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)           |
+| **aws-lambda-slf4j-json-logger** | [![Maven Central](https://img.shields.io/maven-central/v/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger)](https://search.maven.org/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger) | [![Javadoc](https://javadoc.io/badge2/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger/javadoc.svg)](https://javadoc.io/doc/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger) |
 
 ## Table of Contents
 
@@ -42,7 +42,7 @@ described by Frank Afriat in
 you don't have to prepare logging messages
 and stacktraces to log them on CloudWatch Logs.
 
-The footprint of **slf4j-aws-lambda** (88K) is same size
+The footprint of **aws-lambda-slf4j** (88K) is same size
 as **slf4j-simple** (79K) and much smaller than **logback** (888K).
 
 ### Usage
@@ -74,7 +74,7 @@ public String handleRequest(Map<String, Object> input, Context context) {
 }
 ```
 
-The log with **slf4j-aws-lambda-logger**:
+The log with **aws-lambda-slf4j-logger**:
 
 ```log
 983f71e5-9091-443b-8c01-6668120c0e5d INFO io.github.vitalijr2.slf4j_demo.BotHandler - info message
@@ -89,7 +89,7 @@ injection
 983f71e5-9091-443b-8c01-6668120c0e5d WARN io.github.vitalijr2.slf4j_demo.BotHandler - printable stacktrace
 ```
 
-There is a JSON option with **slf4j-aws-lambda-json-logger**:
+There is a JSON option with **aws-lambda-slf4j-json-logger**:
 
 ```json
 {
@@ -224,7 +224,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-[Apache License v2.0](LICENSE)  
+[Apache License v2.0](LICENSE)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 [SLF4J]: https://www.slf4j.org/
