@@ -4,7 +4,7 @@ An [SLF4J][] Logger implementation for [AWS Lambda][lambda]
 and [CloudWatch][cloudwatch].
 
 [![Codacy Badge][codacy-badge]][codacy-badge-link]
-[![Codacy Coverage][codacy-coverage]][codacy-coverage-link]
+[![Codacy Coverage][codacy-coverage]][codacy-coverage-link]  
 [![Libraries.io dependency status for GitHub repo][dependency-status]][dependencies]
 [![Java Version][java-version]][jdk-download]
 
@@ -224,7 +224,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-[Apache License v2.0](LICENSE)
+[Apache License v2.0](LICENSE)  
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 [SLF4J]: https://www.slf4j.org/
