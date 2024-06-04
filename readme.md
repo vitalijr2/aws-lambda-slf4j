@@ -42,8 +42,8 @@ described by Frank Afriat in
 you don't have to prepare logging messages
 and stacktraces to log them on CloudWatch Logs.
 
-The footprint of **aws-lambda-slf4j** (88K) is same size
-as **slf4j-simple** (79K) and much smaller than **logback** (888K).
+The footprint of **aws-lambda-slf4j-logger** (36K) and **aws-lambda-slf4j-logger** (116K)
+are the same as **slf4j-simple** (16K) and much smaller than **logback** (888K).
 
 ### Usage
 
