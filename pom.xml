@@ -250,7 +250,7 @@
           </execution>
         </executions>
         <groupId>org.apache.maven.plugins</groupId>
-        <version>3.4.1</version>
+        <version>3.5.0</version>
       </plugin>
       <plugin>
         <artifactId>flatten-maven-plugin</artifactId>
@@ -363,7 +363,7 @@
   <profiles>
     <profile>
       <build>
-        <defaultGoal>clean deploy</defaultGoal>
+        <defaultGoal>clean verify</defaultGoal>
         <plugins>
           <plugin>
             <artifactId>maven-javadoc-plugin</artifactId>
@@ -388,7 +388,7 @@
               <show>public</show>
               <top><![CDATA[
 <link rel="stylesheet" type="text/css" href="{@docRoot}/resources/prism.css"/>
-<link rel="stylesheet" type="text/css" href="{@docRoot}/resources/slf4j-aws-lambda.css"/>
+<link rel="stylesheet" type="text/css" href="{@docRoot}/resources/aws-lambda-slf4j.css"/>
 							]]></top>
             </configuration>
             <executions>
@@ -439,7 +439,7 @@
     </profile>
   </profiles>
   <properties>
-    <javadoc-plugin.version>3.6.3</javadoc-plugin.version>
+    <javadoc-plugin.version>3.7.0</javadoc-plugin.version>
     <junit-jupiter.version>5.10.2</junit-jupiter.version>
     <mockito.version>5.12.0</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

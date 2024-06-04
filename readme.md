@@ -10,8 +10,8 @@ and [CloudWatch][cloudwatch].
 
 | Logger                           | Release                                                                                                                                                                                                               | Javadoc                                                                                                                                                                                             |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **slf4j-aws-lambda-logger**      | [![Maven Central](https://img.shields.io/maven-central/v/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)](https://search.maven.org/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)           | [![Javadoc](https://javadoc.io/badge2/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger/javadoc.svg)](https://javadoc.io/doc/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)           |
-| **slf4j-aws-lambda-json-logger** | [![Maven Central](https://img.shields.io/maven-central/v/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger)](https://search.maven.org/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger) | [![Javadoc](https://javadoc.io/badge2/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger/javadoc.svg)](https://javadoc.io/doc/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger) |
+| **aws-lambda-slf4j-logger**      | [![Maven Central](https://img.shields.io/maven-central/v/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)](https://search.maven.org/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)           | [![Javadoc](https://javadoc.io/badge2/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger/javadoc.svg)](https://javadoc.io/doc/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-logger)           |
+| **aws-lambda-slf4j-json-logger** | [![Maven Central](https://img.shields.io/maven-central/v/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger)](https://search.maven.org/artifact/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger) | [![Javadoc](https://javadoc.io/badge2/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger/javadoc.svg)](https://javadoc.io/doc/io.github.vitalijr2.aws-lambda/aws-lambda-slf4j-json-logger) |
 
 ## Table of Contents
 
@@ -42,8 +42,9 @@ described by Frank Afriat in
 you don't have to prepare logging messages
 and stacktraces to log them on CloudWatch Logs.
 
-The footprint of **slf4j-aws-lambda** (88K) is same size
-as **slf4j-simple** (79K) and much smaller than **logback** (888K).
+The footprint of **aws-lambda-slf4j-logger** (36K)
+and **aws-lambda-slf4j-json-logger** (116K) are the same as **slf4j-simple** (16K)
+and much smaller than **logback** (888K).
 
 ### Usage
 
@@ -74,7 +75,7 @@ public String handleRequest(Map<String, Object> input, Context context) {
 }
 ```
 
-The log with **slf4j-aws-lambda-logger**:
+The log with **aws-lambda-slf4j-logger**:
 
 ```log
 983f71e5-9091-443b-8c01-6668120c0e5d INFO io.github.vitalijr2.slf4j_demo.BotHandler - info message
@@ -89,7 +90,7 @@ injection
 983f71e5-9091-443b-8c01-6668120c0e5d WARN io.github.vitalijr2.slf4j_demo.BotHandler - printable stacktrace
 ```
 
-There is a JSON option with **slf4j-aws-lambda-json-logger**:
+There is a JSON option with **aws-lambda-slf4j-json-logger**:
 
 ```json
 {
