@@ -363,7 +363,7 @@
   <profiles>
     <profile>
       <build>
-        <defaultGoal>clean verify</defaultGoal>
+        <defaultGoal>clean deploy</defaultGoal>
         <plugins>
           <plugin>
             <artifactId>maven-javadoc-plugin</artifactId>
