@@ -84,7 +84,7 @@
       <artifactId>jsonassert</artifactId>
       <groupId>org.skyscreamer</groupId>
       <scope>test</scope>
-      <version>1.5.1</version>
+      <version>1.5.2</version>
     </dependency>
   </dependencies>
   <description>An SLF4J Logger implementation for AWS Lambda, JSON Output</description>
