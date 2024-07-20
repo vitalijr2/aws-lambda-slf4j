@@ -95,4 +95,24 @@
     <groupId>io.github.vitalijr2.logging</groupId>
     <version>1.2.0</version>
   </parent>
+  <profiles>
+    <profile>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <groupId>org.apache.maven.plugins</groupId>
+            <configuration>
+              <links>
+                <link>
+                  https://javadoc.io/doc/io.github.vitalijr2.logging/aws-lambda-slf4j-core/${project.version}/
+                </link>
+              </links>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+      <id>release</id>
+    </profile>
+  </profiles>
 </project>
