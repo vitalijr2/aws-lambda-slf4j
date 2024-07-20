@@ -342,6 +342,12 @@
       <url>https://github.com/vitalijr2</url>
     </developer>
   </developers>
+  <distributionManagement>
+    <relocation>
+      <groupId>io.github.vitalijr2.logging</groupId>
+      <version>1.2.0</version>
+    </relocation>
+  </distributionManagement>
   <groupId>io.github.vitalijr2.aws-lambda</groupId>
   <inceptionYear>2022</inceptionYear>
   <licenses>
