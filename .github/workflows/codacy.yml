@@ -7,6 +7,8 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ "**" ]
 
+permissions: read-all
+
 jobs:
   build:
     name: Maven build
@@ -35,14 +37,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     permissions:
-      actions: read
-      contents: read
       security-events: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Run Codacy Analysis CLI
-        uses: codacy/codacy-analysis-cli-action@v4.4.1
+        uses: codacy/codacy-analysis-cli-action@09916000460adeeedc96b9704f86deba53e2ad5d
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           verbose: true
@@ -66,7 +66,7 @@ jobs:
           name: tests-and-target
           path: .
       - name: Run codacy-coverage-reporter
-        uses: codacy/codacy-coverage-reporter-action@v1.3.0
+        uses: codacy/codacy-coverage-reporter-action@a38818475bb21847788496e9f0fddaa4e84955ba
         with:
           coverage-reports: core/target/site/jacoco/jacoco.xml,logger/target/site/jacoco/jacoco.xml,json-logger/target/site/jacoco/jacoco.xml
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
