@@ -342,7 +342,7 @@
       <url>https://github.com/vitalijr2</url>
     </developer>
   </developers>
-  <groupId>io.github.vitalijr2.aws-lambda</groupId>
+  <groupId>io.github.vitalijr2.logging</groupId>
   <inceptionYear>2022</inceptionYear>
   <licenses>
     <license>
@@ -452,5 +452,5 @@
     <url>https://github.com/vitalijr2/aws-lambda-slf4j</url>
   </scm>
   <url>https://github.com/vitalijr2/aws-lambda-slf4j</url>
-  <version>1.1.3</version>
+  <version>1.2.0</version>
 </project>
