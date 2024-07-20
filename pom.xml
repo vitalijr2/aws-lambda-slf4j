@@ -25,7 +25,7 @@
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.3.2</version>
+          <version>3.4.0</version>
         </plugin>
         <plugin>
           <artifactId>flatten-maven-plugin</artifactId>
@@ -88,7 +88,7 @@
             </properties>
           </configuration>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.2.5</version>
+          <version>3.3.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -101,7 +101,7 @@
             </archive>
           </configuration>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.4.1</version>
+          <version>3.4.2</version>
         </plugin>
         <plugin>
           <artifactId>maven-failsafe-plugin</artifactId>
@@ -124,7 +124,7 @@
             </execution>
           </executions>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.2.5</version>
+          <version>3.3.1</version>
         </plugin>
         <plugin>
           <artifactId>jacoco-maven-plugin</artifactId>
@@ -217,7 +217,7 @@
         <plugin>
           <artifactId>central-publishing-maven-plugin</artifactId>
           <groupId>org.sonatype.central</groupId>
-          <version>0.4.0</version>
+          <version>0.5.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -274,7 +274,7 @@
       <dependency>
         <artifactId>aws-lambda-java-events</artifactId>
         <groupId>com.amazonaws</groupId>
-        <version>3.11.5</version>
+        <version>3.12.0</version>
       </dependency>
       <dependency>
         <artifactId>slf4j-api</artifactId>
@@ -440,7 +440,7 @@
   </profiles>
   <properties>
     <javadoc-plugin.version>3.7.0</javadoc-plugin.version>
-    <junit-jupiter.version>5.10.2</junit-jupiter.version>
+    <junit-jupiter.version>5.10.3</junit-jupiter.version>
     <mockito.version>5.12.0</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <slf4j.version>2.0.13</slf4j.version>
