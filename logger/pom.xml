@@ -47,7 +47,7 @@
     <dependency>
       <artifactId>aws-lambda-slf4j-core</artifactId>
       <groupId>io.github.vitalijr2.logging</groupId>
-      <version>1.2.0</version>
+      <version>1.2.1</version>
     </dependency>
     <!-- test -->
     <dependency>
@@ -82,7 +82,7 @@
   <parent>
     <artifactId>aws-lambda-slf4j</artifactId>
     <groupId>io.github.vitalijr2.logging</groupId>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
   </parent>
   <profiles>
     <profile>
@@ -92,11 +92,12 @@
             <artifactId>maven-javadoc-plugin</artifactId>
             <groupId>org.apache.maven.plugins</groupId>
             <configuration>
-              <links>
-                <link>
-                  https://javadoc.io/doc/io.github.vitalijr2.logging/aws-lambda-slf4j-core/${project.version}/
-                </link>
-              </links>
+              <offlineLinks>
+                <offlineLink>
+                  <url>https://javadoc.io/doc/io.github.vitalijr2.logging/aws-lambda-slf4j-core/${project.version}/</url>
+                  <location>${project.basedir}/../core/target/apidocs</location>
+                </offlineLink>
+              </offlineLinks>
             </configuration>
           </plugin>
         </plugins>

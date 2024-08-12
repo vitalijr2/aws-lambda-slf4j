@@ -96,6 +96,6 @@
   <parent>
     <artifactId>aws-lambda-slf4j</artifactId>
     <groupId>io.github.vitalijr2.logging</groupId>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
   </parent>
 </project>
