@@ -201,21 +201,72 @@
         </plugin>
         <plugin>
           <artifactId>maven-source-plugin</artifactId>
+          <executions>
+            <execution>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+              <id>attach-sources</id>
+            </execution>
+          </executions>
           <groupId>org.apache.maven.plugins</groupId>
           <version>3.3.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
+          <configuration>
+            <additionalJOptions>
+              <additionalJOption>
+                -J-Dhttp.agent=maven-javadoc-plugin_${project.groupId}:${project.artifactId}
+              </additionalJOption>
+            </additionalJOptions>
+            <additionalOptions>
+              <additionalOption>--allow-script-in-comments</additionalOption>
+            </additionalOptions>
+            <bottom><![CDATA[
+<script type="text/javascript" src="{@docRoot}/resources/prism.js"></script>
+							]]></bottom>
+            <docfilessubdirs>true</docfilessubdirs>
+            <javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
+            <links>
+              <link>https://javadoc.io/doc/org.slf4j/slf4j-api/${slf4j.version}/</link>
+            </links>
+            <offline>false</offline>
+            <show>public</show>
+            <top><![CDATA[
+<link rel="stylesheet" type="text/css" href="{@docRoot}/resources/prism.css"/>
+<link rel="stylesheet" type="text/css" href="{@docRoot}/resources/aws-lambda-slf4j.css"/>
+							]]></top>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>aggregate-jar</goal>
+              </goals>
+              <id>attach-javadocs</id>
+            </execution>
+          </executions>
           <groupId>org.apache.maven.plugins</groupId>
           <version>${javadoc-plugin.version}</version>
         </plugin>
         <plugin>
           <artifactId>sign-maven-plugin</artifactId>
+          <executions>
+            <execution>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+            </execution>
+          </executions>
           <groupId>org.simplify4u.plugins</groupId>
           <version>1.1.0</version>
         </plugin>
         <plugin>
           <artifactId>central-publishing-maven-plugin</artifactId>
+          <configuration>
+            <publishingServerId>central</publishingServerId>
+          </configuration>
+          <extensions>true</extensions>
           <groupId>org.sonatype.central</groupId>
           <version>0.5.0</version>
         </plugin>
@@ -274,7 +325,7 @@
       <dependency>
         <artifactId>aws-lambda-java-events</artifactId>
         <groupId>com.amazonaws</groupId>
-        <version>3.12.0</version>
+        <version>3.13.0</version>
       </dependency>
       <dependency>
         <artifactId>slf4j-api</artifactId>
@@ -316,7 +367,7 @@
         <artifactId>hamcrest</artifactId>
         <groupId>org.hamcrest</groupId>
         <scope>test</scope>
-        <version>2.2</version>
+        <version>3.0</version>
       </dependency>
       <dependency>
         <artifactId>system-stubs-core</artifactId>
@@ -367,71 +418,19 @@
         <plugins>
           <plugin>
             <artifactId>maven-javadoc-plugin</artifactId>
-            <configuration>
-              <additionalJOptions>
-                <additionalJOption>
-                  -J-Dhttp.agent=maven-javadoc-plugin_${project.groupId}:${project.artifactId}
-                </additionalJOption>
-              </additionalJOptions>
-              <additionalOptions>
-                <additionalOption>--allow-script-in-comments</additionalOption>
-              </additionalOptions>
-              <bottom><![CDATA[
-<script type="text/javascript" src="{@docRoot}/resources/prism.js"></script>
-							]]></bottom>
-              <docfilessubdirs>true</docfilessubdirs>
-              <javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
-              <links>
-                <link>https://javadoc.io/doc/org.slf4j/slf4j-api/${slf4j.version}/</link>
-              </links>
-              <offline>false</offline>
-              <show>public</show>
-              <top><![CDATA[
-<link rel="stylesheet" type="text/css" href="{@docRoot}/resources/prism.css"/>
-<link rel="stylesheet" type="text/css" href="{@docRoot}/resources/aws-lambda-slf4j.css"/>
-							]]></top>
-            </configuration>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>jar</goal>
-                </goals>
-                <id>attach-javadocs</id>
-              </execution>
-            </executions>
             <groupId>org.apache.maven.plugins</groupId>
           </plugin>
           <plugin>
             <artifactId>maven-source-plugin</artifactId>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>jar</goal>
-                </goals>
-                <id>attach-sources</id>
-              </execution>
-            </executions>
             <groupId>org.apache.maven.plugins</groupId>
           </plugin>
           <plugin>
-            <artifactId>central-publishing-maven-plugin</artifactId>
-            <configuration>
-              <publishingServerId>central</publishingServerId>
-              <tokenAuth>true</tokenAuth>
-            </configuration>
-            <extensions>true</extensions>
-            <groupId>org.sonatype.central</groupId>
+            <artifactId>sign-maven-plugin</artifactId>
+            <groupId>org.simplify4u.plugins</groupId>
           </plugin>
           <plugin>
-            <artifactId>sign-maven-plugin</artifactId>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-              </execution>
-            </executions>
-            <groupId>org.simplify4u.plugins</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <groupId>org.sonatype.central</groupId>
           </plugin>
         </plugins>
       </build>
@@ -439,11 +438,11 @@
     </profile>
   </profiles>
   <properties>
-    <javadoc-plugin.version>3.7.0</javadoc-plugin.version>
+    <javadoc-plugin.version>3.8.0</javadoc-plugin.version>
     <junit-jupiter.version>5.10.3</junit-jupiter.version>
     <mockito.version>5.12.0</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <slf4j.version>2.0.13</slf4j.version>
+    <slf4j.version>2.0.16</slf4j.version>
     <system-stubs.version>2.1.6</system-stubs.version>
   </properties>
   <scm>
@@ -452,5 +451,5 @@
     <url>https://github.com/vitalijr2/aws-lambda-slf4j</url>
   </scm>
   <url>https://github.com/vitalijr2/aws-lambda-slf4j</url>
-  <version>1.2.0</version>
+  <version>1.2.1</version>
 </project>
