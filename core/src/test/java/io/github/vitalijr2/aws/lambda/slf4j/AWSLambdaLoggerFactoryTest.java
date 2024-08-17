@@ -25,7 +25,7 @@ class AWSLambdaLoggerFactoryTest {
   @Test
   void customOutputServiceProvider() {
     // when
-    var loggerOutput = (AWSLambdaLoggerOutput) assertDoesNotThrow(
+    var loggerOutput = assertDoesNotThrow(
         () -> AWSLambdaLoggerFactory.getOutputServiceProvider(ServiceProvider.class));
     loggerOutput.log(configuration, null, Level.TRACE, "test message", null);
 
