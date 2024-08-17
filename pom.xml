@@ -75,7 +75,7 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <configuration>
-            <release>11</release>
+            <release>${java.version}</release>
           </configuration>
           <groupId>org.apache.maven.plugins</groupId>
           <version>3.13.0</version>
@@ -438,6 +438,7 @@
     </profile>
   </profiles>
   <properties>
+    <java.version>11</java.version>
     <javadoc-plugin.version>3.8.0</javadoc-plugin.version>
     <junit-jupiter.version>5.10.3</junit-jupiter.version>
     <mockito.version>5.12.0</mockito.version>
