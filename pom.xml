@@ -439,7 +439,7 @@
   </profiles>
   <properties>
     <java.version>11</java.version>
-    <javadoc-plugin.version>3.8.0</javadoc-plugin.version>
+    <javadoc-plugin.version>3.10.0</javadoc-plugin.version>
     <junit-jupiter.version>5.11.0</junit-jupiter.version>
     <mockito.version>5.12.0</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
