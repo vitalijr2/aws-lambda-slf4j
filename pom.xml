@@ -441,7 +441,7 @@
     <java.version>11</java.version>
     <javadoc-plugin.version>3.10.0</javadoc-plugin.version>
     <junit-jupiter.version>5.11.0</junit-jupiter.version>
-    <mockito.version>5.14.0</mockito.version>
+    <mockito.version>5.14.2</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <slf4j.version>2.0.16</slf4j.version>
     <system-stubs.version>2.1.7</system-stubs.version>
