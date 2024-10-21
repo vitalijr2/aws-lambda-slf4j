@@ -9,14 +9,14 @@ import org.slf4j.event.Level;
 public class TestServiceProvider implements ServiceProvider {
 
   @Override
-  public String hello() {
-    return "hello world";
+  public void hello(AWSLambdaLoggerConfiguration configuration, Level level) {
+    configuration.isLevelEnabled(level);
   }
 
   @Override
   public void log(@NotNull AWSLambdaLoggerConfiguration configuration, @Nullable Marker marker,
       @NotNull Level level, @NotNull String message, @Nullable Throwable throwable) {
-    hello();
+    hello(configuration, level);
   }
 
 }
