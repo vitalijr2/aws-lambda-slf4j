@@ -444,7 +444,7 @@
     <mockito.version>5.13.0</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <slf4j.version>2.0.16</slf4j.version>
-    <system-stubs.version>2.1.6</system-stubs.version>
+    <system-stubs.version>2.1.7</system-stubs.version>
   </properties>
   <scm>
     <connection>scm:git:https://github.com/vitalijr2/aws-lambda-slf4j.git</connection>
