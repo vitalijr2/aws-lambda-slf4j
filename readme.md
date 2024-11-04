@@ -4,7 +4,7 @@ An [SLF4J][] Logger implementation for [AWS Lambda][lambda]
 and [CloudWatch][cloudwatch].
 
 [![Java Version][java-version]][jdk-download]
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)  
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![GitHub master check runs][github-master-check-runs]][github-master-check-runs-link]
 [![Codacy Badge][codacy-badge]][codacy-badge-link]
 [![Codacy Coverage][codacy-coverage]][codacy-coverage-link]
@@ -237,7 +237,7 @@ limitations under the License.
 
 [cloudwatch]: https://aws.amazon.com/cloudwatch/
 
-[github-master-check-runs]: https://img.shields.io/github/check-runs/vitalijr2/aws-lambda-slf4j/master
+[github-master-check-runs]: https://img.shields.io/github/check-runs/vitalijr2/aws-lambda-slf4j/3Amain
 
 [github-master-check-runs-link]: https://github.com/vitalijr2/aws-lambda-slf4j/actions?query=branch%3Amain
 
