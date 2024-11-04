@@ -230,7 +230,6 @@ limitations under the License.
 
 [Apache License v2.0](LICENSE)
 
-
 [SLF4J]: https://www.slf4j.org/
 
 [lambda]: https://aws.amazon.com/lambda/
