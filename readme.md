@@ -3,10 +3,13 @@
 An [SLF4J][] Logger implementation for [AWS Lambda][lambda]
 and [CloudWatch][cloudwatch].
 
-[![Codacy Badge][codacy-badge]][codacy-badge-link]
-[![Codacy Coverage][codacy-coverage]][codacy-coverage-link]  
-[![Libraries.io dependency status for GitHub repo][dependency-status]][dependencies]
 [![Java Version][java-version]][jdk-download]
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)  
+[![GitHub master check runs][github-master-check-runs]][github-master-check-runs-link]
+[![Codacy Badge][codacy-badge]][codacy-badge-link]
+[![Codacy Coverage][codacy-coverage]][codacy-coverage-link]
+![GitHub commit activity][github-commit-activity]
+[![Today's hits][today-hits]][today-hits-link]
 
 | Logger                           | Release                                                                                                                                                                                                               | Javadoc                                                                                                                                                                                             |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -225,14 +228,18 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-[Apache License v2.0](LICENSE)  
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[Apache License v2.0](LICENSE)
+
 
 [SLF4J]: https://www.slf4j.org/
 
 [lambda]: https://aws.amazon.com/lambda/
 
 [cloudwatch]: https://aws.amazon.com/cloudwatch/
+
+[github-master-check-runs]: https://img.shields.io/github/check-runs/vitalijr2/aws-lambda-slf4j/master
+
+[github-master-check-runs-link]: https://github.com/vitalijr2/aws-lambda-slf4j/actions?query=branch%3Amain
 
 [codacy-badge]: https://app.codacy.com/project/badge/Grade/2c7cc1b8f6d7491283e13447594fdd82
 
@@ -242,9 +249,11 @@ limitations under the License.
 
 [codacy-coverage-link]: https://app.codacy.com/gh/vitalijr2/aws-lambda-slf4j/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage
 
-[dependency-status]: https://img.shields.io/librariesio/github/vitalijr2/aws-lambda-slf4j
+[github-commit-activity]: https://img.shields.io/github/commit-activity/y/vitalijr2/aws-lambda-slf4j
 
-[dependencies]: https://libraries.io/github/vitalijr2/aws-lambda-slf4j
+[today-hits]: https://hits.sh/github.com/vitalijr2/vitalijr2/aws-lambda-slf4j.svg?view=today-total&label=today's%20hits
+
+[today-hits-link]: https://hits.sh/github.com/vitalijr2/vitalijr2/aws-lambda-slf4j/
 
 [java-version]: https://img.shields.io/static/v1?label=java&message=11&color=blue&logo=java&logoColor=E23D28
 
