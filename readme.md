@@ -236,7 +236,7 @@ limitations under the License.
 
 [cloudwatch]: https://aws.amazon.com/cloudwatch/
 
-[github-master-check-runs]: https://img.shields.io/github/check-runs/vitalijr2/aws-lambda-slf4j/3Amain
+[github-master-check-runs]: https://img.shields.io/github/check-runs/vitalijr2/aws-lambda-slf4j/main
 
 [github-master-check-runs-link]: https://github.com/vitalijr2/aws-lambda-slf4j/actions?query=branch%3Amain
 
