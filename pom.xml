@@ -88,7 +88,7 @@
             </properties>
           </configuration>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.5.1</version>
+          <version>3.5.2</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -124,7 +124,7 @@
             </execution>
           </executions>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.5.1</version>
+          <version>3.5.2</version>
         </plugin>
         <plugin>
           <artifactId>jacoco-maven-plugin</artifactId>
@@ -439,7 +439,7 @@
   </profiles>
   <properties>
     <java.version>11</java.version>
-    <javadoc-plugin.version>3.10.1</javadoc-plugin.version>
+    <javadoc-plugin.version>3.11.1</javadoc-plugin.version>
     <junit-jupiter.version>5.11.3</junit-jupiter.version>
     <mockito.version>5.14.2</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
