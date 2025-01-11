@@ -268,7 +268,7 @@
           </configuration>
           <extensions>true</extensions>
           <groupId>org.sonatype.central</groupId>
-          <version>0.6.0</version>
+          <version>0.7.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
