@@ -3,7 +3,7 @@ name: "Check release"
 on:
   push:
     tags:
-      - v*
+      - r*
 
 permissions: read-all
 
