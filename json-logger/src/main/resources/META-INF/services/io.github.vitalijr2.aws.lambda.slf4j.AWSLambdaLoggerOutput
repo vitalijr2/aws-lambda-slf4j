@@ -1,1 +1,1 @@
-io.github.vitalijr2.aws.lambda.slf4j.logger.JSONLoggerOutput
+io.github.vitalijr2.aws.lambda.slf4j.json.logger.JSONLoggerOutput
