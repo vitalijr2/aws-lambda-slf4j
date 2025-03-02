@@ -1,0 +1,28 @@
+name: "Check release"
+
+on:
+  push:
+    tags:
+      - v*
+
+permissions: read-all
+
+jobs:
+  build:
+    name: Maven build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+      - name: Build with Maven
+        env:
+          SIGN_KEY: ${{ secrets.SIGN_KEY }}
+          SIGN_KEY_PASS: ${{ secrets.SIGN_KEY_PASS }}
+        run: |
+          ./mvnw --batch-mode -s .mvn/ci_settings.xml -ntp -DskipTests -DskipPublishing -Prelease
+          ./mvnw license:check-file-header -Dlicense.failOnMissingHeader=true -Pprepare-and-check
