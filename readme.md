@@ -18,17 +18,21 @@ and [CloudWatch][cloudwatch].
 
 ## Table of Contents
 
+<!--ts-->
 * [Getting started](#getting-started)
-  * [Usage](#usage)
-  * [Configuration](#configuration)
-  * [Setup a provider by a system property](#setup-a-provider-by-a-system-property)
+* [Usage](#usage)
+* [Configuration](#configuration)
+* [Setup a provider by a system property](#setup-a-provider-by-a-system-property)
 * [Other solutions](#other-solutions)
 * [Contributing](#contributing)
 * [History](#history)
 * [Authors and acknowledgment](#authors-and-acknowledgment)
 * [License](#license)
 
-Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: r2, at: Sun Mar  2 03:34:06 PM EET 2025 -->
+
+<!--te-->
 
 ## Getting started
 
@@ -215,7 +219,7 @@ See [Changelog](changelog.md)
 ## License
 
 ```text
-Copyright 2022-2024 Vitalij Berdinskih
+Copyright (C) 2022 Vitalij Berdinskih
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
