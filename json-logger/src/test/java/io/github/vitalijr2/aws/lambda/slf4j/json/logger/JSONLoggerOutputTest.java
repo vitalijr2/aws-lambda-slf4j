@@ -1,4 +1,4 @@
-package io.github.vitalijr2.aws.lambda.slf4j.logger;
+package io.github.vitalijr2.aws.lambda.slf4j.json.logger;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;

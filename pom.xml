@@ -1,19 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-	Copyright 2022-2024 Vitalij Berdinskih
-
-	Licensed under the Apache License, Version 2.0 (the "License");
-	you may not use this file except in compliance with the License.
-	You may obtain a copy of the License at
-
-	    http://www.apache.org/licenses/LICENSE-2.0
-
-	Unless required by applicable law or agreed to in writing, software
-	distributed under the License is distributed on an "AS IS" BASIS,
-	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	See the License for the specific language governing permissions and
-	limitations under the License.
--->
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -23,9 +8,9 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>3.4.0</version>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <groupId>org.sonatype.central</groupId>
+          <version>0.7.0</version>
         </plugin>
         <plugin>
           <artifactId>flatten-maven-plugin</artifactId>
@@ -49,82 +34,7 @@
             </execution>
           </executions>
           <groupId>org.codehaus.mojo</groupId>
-          <version>1.6.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>templating-maven-plugin</artifactId>
-          <executions>
-            <execution>
-              <goals>
-                <goal>filter-sources</goal>
-              </goals>
-              <id>filter-sources</id>
-            </execution>
-          </executions>
-          <groupId>org.codehaus.mojo</groupId>
-          <version>3.0.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <configuration>
-            <propertiesEncoding>ISO-8859-1</propertiesEncoding>
-          </configuration>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>3.3.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <configuration>
-            <release>${java.version}</release>
-          </configuration>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>3.13.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <configuration>
-            <properties>
-              <groups>fast</groups>
-            </properties>
-          </configuration>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>3.5.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <configuration>
-            <archive>
-              <manifestEntries>
-                <Created-By>${java.vm.version} (${java.vm.vendor})</Created-By>
-                <Name>${project.name}</Name>
-              </manifestEntries>
-            </archive>
-          </configuration>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>3.4.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-failsafe-plugin</artifactId>
-          <configuration>
-            <forkCount>1</forkCount>
-            <includes>
-              <include>**/*Test.java</include>
-            </includes>
-            <properties>
-              <groups>slow</groups>
-            </properties>
-            <reuseForks>false</reuseForks>
-          </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>integration-test</goal>
-                <goal>verify</goal>
-              </goals>
-            </execution>
-          </executions>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>3.5.2</version>
+          <version>1.7.0</version>
         </plugin>
         <plugin>
           <artifactId>jacoco-maven-plugin</artifactId>
@@ -200,17 +110,56 @@
           <version>0.8.12</version>
         </plugin>
         <plugin>
-          <artifactId>maven-source-plugin</artifactId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <groupId>org.apache.maven.plugins</groupId>
+          <version>3.4.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <release>${java.version}</release>
+            <showDeprecation>true</showDeprecation>
+            <source>${java.version}</source>
+            <target>${java.version}</target>
+          </configuration>
+          <groupId>org.apache.maven.plugins</groupId>
+          <version>3.14.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-failsafe-plugin</artifactId>
+          <configuration>
+            <forkCount>1</forkCount>
+            <includes>
+              <include>**/*Test.java</include>
+            </includes>
+            <properties>
+              <groups>slow</groups>
+            </properties>
+            <reuseForks>false</reuseForks>
+          </configuration>
           <executions>
             <execution>
               <goals>
-                <goal>jar</goal>
+                <goal>integration-test</goal>
+                <goal>verify</goal>
               </goals>
-              <id>attach-sources</id>
             </execution>
           </executions>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.3.1</version>
+          <version>3.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <configuration>
+            <archive>
+              <manifestEntries>
+                <Created-By>${java.vm.version} (${java.vm.vendor})</Created-By>
+                <Name>${project.name}</Name>
+              </manifestEntries>
+            </archive>
+          </configuration>
+          <groupId>org.apache.maven.plugins</groupId>
+          <version>3.4.2</version>
         </plugin>
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
@@ -238,37 +187,41 @@
 <link rel="stylesheet" type="text/css" href="{@docRoot}/resources/aws-lambda-slf4j.css"/>
 							]]></top>
           </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>aggregate-jar</goal>
-              </goals>
-              <id>attach-javadocs</id>
-            </execution>
-          </executions>
           <groupId>org.apache.maven.plugins</groupId>
           <version>${javadoc-plugin.version}</version>
         </plugin>
         <plugin>
-          <artifactId>sign-maven-plugin</artifactId>
-          <executions>
-            <execution>
-              <goals>
-                <goal>sign</goal>
-              </goals>
-            </execution>
-          </executions>
-          <groupId>org.simplify4u.plugins</groupId>
-          <version>1.1.0</version>
+          <artifactId>maven-resources-plugin</artifactId>
+          <configuration>
+            <propertiesEncoding>ISO-8859-1</propertiesEncoding>
+          </configuration>
+          <groupId>org.apache.maven.plugins</groupId>
+          <version>3.3.1</version>
         </plugin>
         <plugin>
-          <artifactId>central-publishing-maven-plugin</artifactId>
+          <artifactId>maven-source-plugin</artifactId>
+          <groupId>org.apache.maven.plugins</groupId>
+          <version>3.3.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
           <configuration>
-            <publishingServerId>central</publishingServerId>
+            <properties>
+              <groups>fast</groups>
+            </properties>
           </configuration>
-          <extensions>true</extensions>
-          <groupId>org.sonatype.central</groupId>
-          <version>0.7.0</version>
+          <groupId>org.apache.maven.plugins</groupId>
+          <version>3.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>semver-maven-plugin</artifactId>
+          <groupId>io.github.q3769</groupId>
+          <version>20240116.0.202411140438</version>
+        </plugin>
+        <plugin>
+          <artifactId>sign-maven-plugin</artifactId>
+          <groupId>org.simplify4u.plugins</groupId>
+          <version>1.1.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -278,7 +231,7 @@
         <configuration>
           <rules>
             <requireJavaVersion>
-              <version>[11,)</version>
+              <version>[${java.version},)</version>
             </requireJavaVersion>
             <requireMavenVersion>
               <version>[3.9.0,)</version>
@@ -309,14 +262,12 @@
       </plugin>
     </plugins>
   </build>
+  <ciManagement>
+    <system>GitHub Actions</system>
+    <url>https://github.com/vitalijr2/aws-lambda-slf4j/actions</url>
+  </ciManagement>
   <dependencyManagement>
     <dependencies>
-      <dependency>
-        <artifactId>annotations</artifactId>
-        <groupId>org.jetbrains</groupId>
-        <scope>provided</scope>
-        <version>26.0.2</version>
-      </dependency>
       <dependency>
         <artifactId>aws-lambda-java-core</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -325,31 +276,37 @@
       <dependency>
         <artifactId>aws-lambda-java-events</artifactId>
         <groupId>com.amazonaws</groupId>
-        <version>3.14.0</version>
+        <version>3.15.0</version>
       </dependency>
       <dependency>
-        <artifactId>slf4j-api</artifactId>
-        <groupId>org.slf4j</groupId>
-        <version>${slf4j.version}</version>
+        <artifactId>annotations</artifactId>
+        <groupId>org.jetbrains</groupId>
+        <scope>provided</scope>
+        <version>26.0.2</version>
       </dependency>
-      <!-- test -->
+      <dependency>
+        <artifactId>hamcrest</artifactId>
+        <groupId>org.hamcrest</groupId>
+        <scope>test</scope>
+        <version>3.0</version>
+      </dependency>
       <dependency>
         <artifactId>junit-jupiter-api</artifactId>
         <groupId>org.junit.jupiter</groupId>
         <scope>test</scope>
-        <version>${junit-jupiter.version}</version>
+        <version>${junit.version}</version>
       </dependency>
       <dependency>
         <artifactId>junit-jupiter-engine</artifactId>
         <groupId>org.junit.jupiter</groupId>
         <scope>test</scope>
-        <version>${junit-jupiter.version}</version>
+        <version>${junit.version}</version>
       </dependency>
       <dependency>
         <artifactId>junit-jupiter-params</artifactId>
         <groupId>org.junit.jupiter</groupId>
         <scope>test</scope>
-        <version>${junit-jupiter.version}</version>
+        <version>${junit.version}</version>
       </dependency>
       <dependency>
         <artifactId>mockito-core</artifactId>
@@ -364,10 +321,9 @@
         <version>${mockito.version}</version>
       </dependency>
       <dependency>
-        <artifactId>hamcrest</artifactId>
-        <groupId>org.hamcrest</groupId>
-        <scope>test</scope>
-        <version>3.0</version>
+        <artifactId>slf4j-api</artifactId>
+        <groupId>org.slf4j</groupId>
+        <version>${slf4j.version}</version>
       </dependency>
       <dependency>
         <artifactId>system-stubs-core</artifactId>
@@ -395,11 +351,15 @@
   </developers>
   <groupId>io.github.vitalijr2.logging</groupId>
   <inceptionYear>2022</inceptionYear>
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/vitalijr2/aws-lambda-slf4j/issues</url>
+  </issueManagement>
   <licenses>
     <license>
       <comments>See NOTICE for third-party licenses.</comments>
       <distribution>repo</distribution>
-      <name>Apache 2</name>
+      <name>Apache-2.0</name>
       <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
     </license>
   </licenses>
@@ -414,23 +374,107 @@
   <profiles>
     <profile>
       <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <artifactId>license-maven-plugin</artifactId>
+              <executions>
+                <execution>
+                  <configuration>
+                    <addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
+                    <excludeTransitiveDependencies>true</excludeTransitiveDependencies>
+                    <excludedGroups>io\.github\.vitalijr2\.logging</excludedGroups>
+                    <excludedScopes>test</excludedScopes>
+                    <excludes>
+                      <exclude>**/package-info.java</exclude>
+                    </excludes>
+                    <inceptionYear>${project.inceptionYear}</inceptionYear>
+                    <!-- @formatter:off -->
+                    <licenseMerges>
+                      <licenseMerge>Apache License version 2.0|Apache License, Version 2.0|The Apache Software License, Version 2.0</licenseMerge>
+                      <licenseMerge>MIT License|MIT</licenseMerge>
+                    </licenseMerges>
+                    <licenseName>apache_v2</licenseName>
+                    <!-- @formatter:on -->
+                    <organizationName>Vitalij Berdinskih</organizationName>
+                    <outputDirectory>${project.basedir}</outputDirectory>
+                    <processEndTag>---------------LICENSE_END-------------------</processEndTag>
+                    <processStartTag>---------------LICENSE_START-----------------</processStartTag>
+                    <projectName>SLF4J for AWS Lambda</projectName>
+                    <roots>
+                      <root>src/main/java</root>
+                    </roots>
+                    <sectionDelimiter>---------------------------------------------
+                    </sectionDelimiter>
+                    <trimHeaderLine>true</trimHeaderLine>
+                  </configuration>
+                  <id>default-cli</id>
+                </execution>
+              </executions>
+              <groupId>org.codehaus.mojo</groupId>
+              <version>2.5.0</version>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+        <plugins>
+          <plugin>
+            <artifactId>license-maven-plugin</artifactId>
+            <configuration>
+              <skipCheckLicense>true</skipCheckLicense>
+            </configuration>
+            <groupId>org.codehaus.mojo</groupId>
+          </plugin>
+        </plugins>
+      </build>
+      <id>prepare-and-check</id>
+    </profile>
+    <profile>
+      <build>
         <defaultGoal>clean deploy</defaultGoal>
         <plugins>
           <plugin>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <configuration>
+              <ignorePublishedComponents>true</ignorePublishedComponents>
+              <publishingServerId>central</publishingServerId>
+            </configuration>
+            <extensions>true</extensions>
+            <groupId>org.sonatype.central</groupId>
+          </plugin>
+          <plugin>
             <artifactId>maven-javadoc-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+                <id>attach-javadocs</id>
+              </execution>
+            </executions>
             <groupId>org.apache.maven.plugins</groupId>
           </plugin>
           <plugin>
             <artifactId>maven-source-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+                <id>attach-sources</id>
+              </execution>
+            </executions>
             <groupId>org.apache.maven.plugins</groupId>
           </plugin>
           <plugin>
             <artifactId>sign-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
             <groupId>org.simplify4u.plugins</groupId>
-          </plugin>
-          <plugin>
-            <artifactId>central-publishing-maven-plugin</artifactId>
-            <groupId>org.sonatype.central</groupId>
           </plugin>
         </plugins>
       </build>
@@ -440,10 +484,10 @@
   <properties>
     <java.version>11</java.version>
     <javadoc-plugin.version>3.11.2</javadoc-plugin.version>
-    <junit-jupiter.version>5.11.4</junit-jupiter.version>
+    <junit.version>5.12.0</junit.version>
     <mockito.version>5.15.2</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <slf4j.version>2.0.16</slf4j.version>
+    <slf4j.version>2.0.17</slf4j.version>
     <system-stubs.version>2.1.7</system-stubs.version>
   </properties>
   <scm>
@@ -452,5 +496,5 @@
     <url>https://github.com/vitalijr2/aws-lambda-slf4j</url>
   </scm>
   <url>https://github.com/vitalijr2/aws-lambda-slf4j</url>
-  <version>1.2.1</version>
+  <version>1.2.2</version>
 </project>

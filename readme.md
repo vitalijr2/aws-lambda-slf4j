@@ -4,7 +4,7 @@ An [SLF4J][] Logger implementation for [AWS Lambda][lambda]
 and [CloudWatch][cloudwatch].
 
 [![Java Version][java-version]][jdk-download]
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)  
+[![License][license-badge]][license-link]
 [![GitHub master check runs][github-master-check-runs]][github-master-check-runs-link]
 [![Codacy Badge][codacy-badge]][codacy-badge-link]
 [![Codacy Coverage][codacy-coverage]][codacy-coverage-link]
@@ -18,17 +18,21 @@ and [CloudWatch][cloudwatch].
 
 ## Table of Contents
 
+<!--ts-->
 * [Getting started](#getting-started)
-  * [Usage](#usage)
-  * [Configuration](#configuration)
-  * [Setup a provider by a system property](#setup-a-provider-by-a-system-property)
+* [Usage](#usage)
+* [Configuration](#configuration)
+* [Setup a provider by a system property](#setup-a-provider-by-a-system-property)
 * [Other solutions](#other-solutions)
 * [Contributing](#contributing)
 * [History](#history)
 * [Authors and acknowledgment](#authors-and-acknowledgment)
 * [License](#license)
 
-Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: r2, at: Sun Mar  2 03:34:06 PM EET 2025 -->
+
+<!--te-->
 
 ## Getting started
 
@@ -214,21 +218,23 @@ See [Changelog](changelog.md)
 
 ## License
 
-Copyright 2022-2024 Vitalij Berdinskih
+```text
+Copyright (C) 2022 Vitalij Berdinskih
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-[http://www.apache.org/licenses/LICENSE-2.0][license]
+     https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+```
 
-[Apache License v2.0](LICENSE)
+See full text [here](LICENSE "the LICENSE file").
 
 [SLF4J]: https://www.slf4j.org/
 
@@ -282,4 +288,6 @@ limitations under the License.
 
 [cloudwatchlogs-java-appender]: https://github.com/boxfuse/cloudwatchlogs-java-appender
 
-[license]: http://www.apache.org/licenses/LICENSE-2.0 "Apache License, Version 2.0"
+[license-badge]: https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat
+
+[license-link]: https://www.apache.org/licenses/LICENSE-2.0.html
