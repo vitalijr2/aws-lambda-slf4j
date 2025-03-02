@@ -435,7 +435,6 @@
           <plugin>
             <artifactId>central-publishing-maven-plugin</artifactId>
             <configuration>
-              <ignorePublishedComponents>true</ignorePublishedComponents>
               <publishingServerId>central</publishingServerId>
             </configuration>
             <extensions>true</extensions>
