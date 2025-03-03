@@ -435,6 +435,7 @@
           <plugin>
             <artifactId>central-publishing-maven-plugin</artifactId>
             <configuration>
+              <deploymentName>${project.name}</deploymentName>
               <publishingServerId>central</publishingServerId>
             </configuration>
             <extensions>true</extensions>
