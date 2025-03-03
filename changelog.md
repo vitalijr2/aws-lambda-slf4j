@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add activity badges, update other
 - Update dependencies: aws-lambda-java-events, slf4j-api
-- Update Maven plugins: clean, compiler, flatten, invoker, javadoc, junit5, surefire and failsafe
+- Update Maven plugins: clean, compiler, flatten, invoker, javadoc, junit5,
+  surefire and failsafe
 - Add Security page; update the CodeQL workflow
 - Replace license names with SPDX identifiers
 - Add prepare and check workflow
@@ -116,7 +117,7 @@ This version is not released, just update documentation.
 
 This version is not released, just update documentation.
 
-- Update the [example](example-lambda)
+- Update the example
 - Update documentation
 - Update dependencies
 
