@@ -107,7 +107,7 @@
             </execution>
           </executions>
           <groupId>org.jacoco</groupId>
-          <version>0.8.12</version>
+          <version>0.8.13</version>
         </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
@@ -146,7 +146,7 @@
             </execution>
           </executions>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.5.2</version>
+          <version>3.5.3</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -211,7 +211,7 @@
             </properties>
           </configuration>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.5.2</version>
+          <version>3.5.3</version>
         </plugin>
         <plugin>
           <artifactId>semver-maven-plugin</artifactId>
@@ -357,7 +357,7 @@
   </issueManagement>
   <licenses>
     <license>
-      <comments>See NOTICE for third-party licenses.</comments>
+      <comments>See THIRD-PARTY.txt for third-party licenses.</comments>
       <distribution>repo</distribution>
       <name>Apache-2.0</name>
       <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
@@ -383,7 +383,7 @@
                   <configuration>
                     <addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
                     <excludeTransitiveDependencies>true</excludeTransitiveDependencies>
-                    <excludedGroups>io\.github\.vitalijr2\.logging</excludedGroups>
+                    <excludedGroups>^io\.github\.vitalijr2</excludedGroups>
                     <excludedScopes>test</excludedScopes>
                     <excludes>
                       <exclude>**/package-info.java</exclude>
@@ -484,11 +484,11 @@
   <properties>
     <java.version>11</java.version>
     <javadoc-plugin.version>3.11.2</javadoc-plugin.version>
-    <junit.version>5.12.0</junit.version>
-    <mockito.version>5.16.0</mockito.version>
+    <junit.version>5.12.2</junit.version>
+    <mockito.version>5.18.0</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <slf4j.version>2.0.17</slf4j.version>
-    <system-stubs.version>2.1.7</system-stubs.version>
+    <system-stubs.version>2.1.8</system-stubs.version>
   </properties>
   <scm>
     <connection>scm:git:https://github.com/vitalijr2/aws-lambda-slf4j.git</connection>

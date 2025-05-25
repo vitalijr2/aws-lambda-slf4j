@@ -2,5 +2,5 @@
 Lists of 4 third-party dependencies.
      (Apache License version 2.0) AWS Lambda Java Core Library (com.amazonaws:aws-lambda-java-core:1.2.3 - https://aws.amazon.com/lambda/)
      (Apache License version 2.0) JetBrains Java Annotations (org.jetbrains:annotations:26.0.2 - https://github.com/JetBrains/java-annotations)
-     (Public Domain) JSON in Java (org.json:json:20250107 - https://github.com/douglascrockford/JSON-java)
+     (Public Domain) JSON in Java (org.json:json:20250517 - https://github.com/douglascrockford/JSON-java)
      (MIT License) SLF4J API Module (org.slf4j:slf4j-api:2.0.17 - http://www.slf4j.org)
