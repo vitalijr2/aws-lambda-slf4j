@@ -23,6 +23,8 @@ jobs:
         env:
           SIGN_KEY: ${{ secrets.SIGN_KEY }}
           SIGN_KEY_PASS: ${{ secrets.SIGN_KEY_PASS }}
+          SONATYPE_TOKEN_PASSWORD: ${{ secrets.SONATYPE_TOKEN_PASSWORD }}
+          SONATYPE_TOKEN_USERNAME: ${{ secrets.SONATYPE_TOKEN_USERNAME }}
         run: |
           ./mvnw --batch-mode -s .mvn/ci_settings.xml -ntp -DskipTests -DskipPublishing -Prelease
           ./mvnw license:check-file-header -Dlicense.failOnMissingHeader=true -Pprepare-and-check
