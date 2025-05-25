@@ -357,7 +357,7 @@
   </issueManagement>
   <licenses>
     <license>
-      <comments>See NOTICE for third-party licenses.</comments>
+      <comments>See THIRD-PARTY.txt for third-party licenses.</comments>
       <distribution>repo</distribution>
       <name>Apache-2.0</name>
       <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
@@ -383,7 +383,7 @@
                   <configuration>
                     <addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
                     <excludeTransitiveDependencies>true</excludeTransitiveDependencies>
-                    <excludedGroups>io\.github\.vitalijr2\.logging</excludedGroups>
+                    <excludedGroups>^io\.github\.vitalijr2</excludedGroups>
                     <excludedScopes>test</excludedScopes>
                     <excludes>
                       <exclude>**/package-info.java</exclude>
