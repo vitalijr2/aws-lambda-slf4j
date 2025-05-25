@@ -215,6 +215,9 @@
         </plugin>
         <plugin>
           <artifactId>semver-maven-plugin</artifactId>
+          <configuration>
+            <processModule>true</processModule>
+          </configuration>
           <groupId>io.github.q3769</groupId>
           <version>20240116.0.202411140438</version>
         </plugin>
@@ -435,7 +438,8 @@
           <plugin>
             <artifactId>central-publishing-maven-plugin</artifactId>
             <configuration>
-              <deploymentName>${project.name}</deploymentName>
+              <deploymentName>SLF4J for AWS Lambda</deploymentName>
+              <ignorePublishedComponents>true</ignorePublishedComponents>
               <publishingServerId>central</publishingServerId>
             </configuration>
             <extensions>true</extensions>
@@ -496,5 +500,5 @@
     <url>https://github.com/vitalijr2/aws-lambda-slf4j</url>
   </scm>
   <url>https://github.com/vitalijr2/aws-lambda-slf4j</url>
-  <version>1.2.2</version>
+  <version>1.2.3</version>
 </project>

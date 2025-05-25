@@ -19,7 +19,7 @@
     <dependency>
       <artifactId>aws-lambda-slf4j-core</artifactId>
       <groupId>io.github.vitalijr2.logging</groupId>
-      <version>1.2.2</version>
+      <version>1.2.3</version>
     </dependency>
     <dependency>
       <artifactId>aws-lambda-java-core</artifactId>
@@ -72,7 +72,7 @@
   <parent>
     <artifactId>aws-lambda-slf4j</artifactId>
     <groupId>io.github.vitalijr2.logging</groupId>
-    <version>1.2.2</version>
+    <version>1.2.3</version>
   </parent>
   <profiles>
     <profile>
@@ -109,4 +109,5 @@
       <id>release</id>
     </profile>
   </profiles>
+  <version>1.2.3</version>
 </project>
