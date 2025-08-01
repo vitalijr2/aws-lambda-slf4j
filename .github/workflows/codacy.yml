@@ -42,7 +42,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Run Codacy Analysis CLI
-        uses: codacy/codacy-analysis-cli-action@09916000460adeeedc96b9704f86deba53e2ad5d
+        uses: codacy/codacy-analysis-cli-action@d28ce580f19309cd493628eba4641f745822082c
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           verbose: true
