@@ -230,6 +230,10 @@
     </pluginManagement>
     <plugins>
       <plugin>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <groupId>org.codehaus.mojo</groupId>
+      </plugin>
+      <plugin>
         <artifactId>maven-enforcer-plugin</artifactId>
         <configuration>
           <rules>
@@ -259,15 +263,11 @@
         <groupId>org.apache.maven.plugins</groupId>
         <version>3.5.0</version>
       </plugin>
-      <plugin>
-        <artifactId>flatten-maven-plugin</artifactId>
-        <groupId>org.codehaus.mojo</groupId>
-      </plugin>
     </plugins>
   </build>
   <ciManagement>
-    <system>GitHub Actions</system>
-    <url>https://github.com/vitalijr2/aws-lambda-slf4j/actions</url>
+    <system>GitLab Pipelines</system>
+    <url>https://gitlab.com/vitalijr2/aws-lambda-slf4j/-/pipelines</url>
   </ciManagement>
   <dependencyManagement>
     <dependencies>
@@ -349,14 +349,14 @@
       <id>vitalijr2</id>
       <name>Vitalij Berdinskih</name>
       <timezone>Europe/Kyiv</timezone>
-      <url>https://github.com/vitalijr2</url>
+      <url>https://gitlab.com/vitalijr2</url>
     </developer>
   </developers>
   <groupId>io.github.vitalijr2.logging</groupId>
   <inceptionYear>2022</inceptionYear>
   <issueManagement>
-    <system>GitHub Issues</system>
-    <url>https://github.com/vitalijr2/aws-lambda-slf4j/issues</url>
+    <system>GitLab Issues</system>
+    <url>https://gitlab.com/vitalijr2/aws-lambda-slf4j/-/issues</url>
   </issueManagement>
   <licenses>
     <license>
@@ -415,7 +415,7 @@
                 </execution>
               </executions>
               <groupId>org.codehaus.mojo</groupId>
-              <version>2.5.0</version>
+              <version>2.6.0</version>
             </plugin>
           </plugins>
         </pluginManagement>
@@ -488,7 +488,7 @@
   <properties>
     <java.version>11</java.version>
     <javadoc-plugin.version>3.11.2</javadoc-plugin.version>
-    <junit.version>5.13.0</junit.version>
+    <junit.version>5.13.1</junit.version>
     <mockito.version>5.18.0</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <slf4j.version>2.0.17</slf4j.version>
