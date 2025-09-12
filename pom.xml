@@ -340,6 +340,11 @@
         <scope>test</scope>
         <version>${system-stubs.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.6.1</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <description>An SLF4J Logger implementation for AWS Lambda and CloudWatch.</description>
