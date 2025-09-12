@@ -28,6 +28,8 @@ verify:development:
   stage: test
   script:
     - ./mvnw $MAVEN_CLI_OPTS verify
+    - awk -F"," '{ instructions += $4 + $5; covered += $5 } END { print covered, "/", instructions, "instructions covered"; print 100*covered/instructions, "% covered" }' `find . -name jacoco.csv -print`
+    - bash <(curl -Ls https://coverage.codacy.com/get.sh)
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       when: never
@@ -50,6 +52,10 @@ verify:default:
   stage: test
   script:
     - ./mvnw $MAVEN_CLI_OPTS verify
+    - awk -F"," '{ instructions += $4 + $5; covered += $5 } END { print covered, "/", instructions, "instructions covered"; print 100*covered/instructions, "% covered" }' `find . -name jacoco.csv -print`
+    - bash <(curl -Ls https://coverage.codacy.com/get.sh)
+    - ./mvnw $MAVEN_CLI_OPTS verify -DskipTests -Prun-its
+    - ./mvnw license:check-file-header -Dlicense.failOnMissingHeader=true -Pprepare-and-check
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       when: always
