@@ -10,7 +10,7 @@
         <plugin>
           <artifactId>central-publishing-maven-plugin</artifactId>
           <groupId>org.sonatype.central</groupId>
-          <version>0.7.0</version>
+          <version>0.9.0</version>
         </plugin>
         <plugin>
           <artifactId>flatten-maven-plugin</artifactId>
@@ -34,7 +34,7 @@
             </execution>
           </executions>
           <groupId>org.codehaus.mojo</groupId>
-          <version>1.7.0</version>
+          <version>1.7.3</version>
         </plugin>
         <plugin>
           <artifactId>jacoco-maven-plugin</artifactId>
@@ -107,12 +107,12 @@
             </execution>
           </executions>
           <groupId>org.jacoco</groupId>
-          <version>0.8.13</version>
+          <version>0.8.14</version>
         </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.4.1</version>
+          <version>3.5.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
@@ -123,7 +123,7 @@
             <target>${java.version}</target>
           </configuration>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.14.0</version>
+          <version>3.14.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-failsafe-plugin</artifactId>
@@ -146,7 +146,7 @@
             </execution>
           </executions>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.5.3</version>
+          <version>3.5.4</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -159,7 +159,7 @@
             </archive>
           </configuration>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.4.2</version>
+          <version>3.5.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
@@ -211,7 +211,7 @@
             </properties>
           </configuration>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>3.5.3</version>
+          <version>3.5.4</version>
         </plugin>
         <plugin>
           <artifactId>semver-maven-plugin</artifactId>
@@ -219,7 +219,7 @@
             <processModule>true</processModule>
           </configuration>
           <groupId>io.github.q3769</groupId>
-          <version>20240116.0.202411140438</version>
+          <version>20240116.0.202508122232</version>
         </plugin>
         <plugin>
           <artifactId>sign-maven-plugin</artifactId>
@@ -229,6 +229,10 @@
       </plugins>
     </pluginManagement>
     <plugins>
+      <plugin>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <groupId>org.codehaus.mojo</groupId>
+      </plugin>
       <plugin>
         <artifactId>maven-enforcer-plugin</artifactId>
         <configuration>
@@ -257,35 +261,31 @@
           </execution>
         </executions>
         <groupId>org.apache.maven.plugins</groupId>
-        <version>3.5.0</version>
-      </plugin>
-      <plugin>
-        <artifactId>flatten-maven-plugin</artifactId>
-        <groupId>org.codehaus.mojo</groupId>
+        <version>3.6.2</version>
       </plugin>
     </plugins>
   </build>
   <ciManagement>
-    <system>GitHub Actions</system>
-    <url>https://github.com/vitalijr2/aws-lambda-slf4j/actions</url>
+    <system>GitLab Pipelines</system>
+    <url>https://gitlab.com/vitalijr2/aws-lambda-slf4j/-/pipelines</url>
   </ciManagement>
   <dependencyManagement>
     <dependencies>
       <dependency>
         <artifactId>aws-lambda-java-core</artifactId>
         <groupId>com.amazonaws</groupId>
-        <version>1.2.3</version>
+        <version>1.4.0</version>
       </dependency>
       <dependency>
         <artifactId>aws-lambda-java-events</artifactId>
         <groupId>com.amazonaws</groupId>
-        <version>3.15.0</version>
+        <version>3.16.1</version>
       </dependency>
       <dependency>
         <artifactId>annotations</artifactId>
         <groupId>org.jetbrains</groupId>
         <scope>provided</scope>
-        <version>26.0.2</version>
+        <version>26.0.2-1</version>
       </dependency>
       <dependency>
         <artifactId>hamcrest</artifactId>
@@ -340,6 +340,11 @@
         <scope>test</scope>
         <version>${system-stubs.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.6.1</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <description>An SLF4J Logger implementation for AWS Lambda and CloudWatch.</description>
@@ -349,14 +354,14 @@
       <id>vitalijr2</id>
       <name>Vitalij Berdinskih</name>
       <timezone>Europe/Kyiv</timezone>
-      <url>https://github.com/vitalijr2</url>
+      <url>https://gitlab.com/vitalijr2</url>
     </developer>
   </developers>
   <groupId>io.github.vitalijr2.logging</groupId>
   <inceptionYear>2022</inceptionYear>
   <issueManagement>
-    <system>GitHub Issues</system>
-    <url>https://github.com/vitalijr2/aws-lambda-slf4j/issues</url>
+    <system>GitLab Issues</system>
+    <url>https://gitlab.com/vitalijr2/aws-lambda-slf4j/-/issues</url>
   </issueManagement>
   <licenses>
     <license>
@@ -415,7 +420,7 @@
                 </execution>
               </executions>
               <groupId>org.codehaus.mojo</groupId>
-              <version>2.5.0</version>
+              <version>2.7.0</version>
             </plugin>
           </plugins>
         </pluginManagement>
@@ -486,10 +491,10 @@
     </profile>
   </profiles>
   <properties>
-    <java.version>11</java.version>
-    <javadoc-plugin.version>3.11.2</javadoc-plugin.version>
-    <junit.version>5.12.2</junit.version>
-    <mockito.version>5.18.0</mockito.version>
+    <java.version>17</java.version>
+    <javadoc-plugin.version>3.12.0</javadoc-plugin.version>
+    <junit.version>6.0.1</junit.version>
+    <mockito.version>5.20.0</mockito.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <slf4j.version>2.0.17</slf4j.version>
     <system-stubs.version>2.1.8</system-stubs.version>
@@ -500,5 +505,5 @@
     <url>https://github.com/vitalijr2/aws-lambda-slf4j</url>
   </scm>
   <url>https://github.com/vitalijr2/aws-lambda-slf4j</url>
-  <version>1.2.3</version>
+  <version>2.0.0-SNAPSHOT</version>
 </project>
