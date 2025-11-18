@@ -219,7 +219,7 @@
             <processModule>true</processModule>
           </configuration>
           <groupId>io.github.q3769</groupId>
-          <version>20240116.0.202411140438</version>
+          <version>20240116.0.202508122232</version>
         </plugin>
         <plugin>
           <artifactId>sign-maven-plugin</artifactId>
