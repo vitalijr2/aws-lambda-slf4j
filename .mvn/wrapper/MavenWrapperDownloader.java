@@ -29,7 +29,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.concurrent.ThreadLocalRandom;
 
-@SuppressWarnings("PMD.NoPackage")
 public final class MavenWrapperDownloader {
     private static final String WRAPPER_VERSION = "3.3.4";
 
