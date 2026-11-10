@@ -45,7 +45,7 @@
     <dependency>
       <artifactId>json</artifactId>
       <groupId>org.json</groupId>
-      <version>20250517</version>
+      <version>20260719</version>
     </dependency>
     <dependency>
       <artifactId>mockito-core</artifactId>
